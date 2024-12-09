@@ -19,6 +19,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: _emailController.text, password: _passwordController.text);
+
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const TodoScreen(),
       ));
